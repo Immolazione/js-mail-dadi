@@ -19,13 +19,21 @@ console.table(emails);
 //CHIEDERE MAIL ALL'UTENTE
 const currentEmail = prompt("Qual è la tua mail?", "example.mail@gmail.com").trim("");
 console.log(currentEmail);
-
 //ACCOGLIENZA SE MAIL PRESENTE, NOTIFICA SE MAIL ASSENTE
-if (emails.includes(currentEmail)) {
-    console.log("Bentornato!");
-} else {
-    console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
+for (let i = 0; i < emails.length; i++) {
+    if (emails[i] == currentEmail) {
+        console.log(emails[i]);
+        console.log("Bentornato!");
+    } else {
+        console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
+        }
 }
+
+// if (emails.includes(currentEmail)) {
+//     console.log("Bentornato!");
+// } else {
+//     console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
+// }
 
 //GIOCO DEI DADI
 
