@@ -12,8 +12,14 @@ console.log("JS OK");
 
 //MAIL 
 
-emails = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com", "mail4@gmail.com"];
+let emails = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com", "mail4@gmail.com"];
 console.table(emails);
 
 const currentEmail = prompt("Qual è la tua mail?", "example.mail@gmail.com").trim("");
 console.log(currentEmail);
+
+if (emails.includes(currentEmail)) {
+    console.log("Bentornato!");
+} else {
+    console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
+}
