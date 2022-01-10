@@ -23,3 +23,12 @@ if (emails.includes(currentEmail)) {
 } else {
     console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
 }
+
+//GIOCO DEI DADI
+
+let playerNumber = Math.floor(Math.random() * 6) +1;
+console.log(playerNumber);
+
+let computerNumber = Math.floor(Math.random() * 6) +1;
+console.log(computerNumber);
+
