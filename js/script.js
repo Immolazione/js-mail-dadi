@@ -32,3 +32,10 @@ console.log(playerNumber);
 let computerNumber = Math.floor(Math.random() * 6) +1;
 console.log(computerNumber);
 
+if (playerNumber > computerNumber){
+    console.log(`Il Player ha vinto, con un punteggio di ${playerNumber}`);
+} else if (computerNumber > playerNumber) {
+    console.log(`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
+} else if (computerNumber % playerNumber === 0) {
+    console.log(`Nessuno dei due giocatori ha vinto, parità!`);
+}
