@@ -12,12 +12,15 @@ console.log("JS OK");
 
 //MAIL 
 
+//ARRAY CON LE MAIL STORATE
 let emails = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com", "mail4@gmail.com"];
 console.table(emails);
 
+//CHIEDERE MAIL ALL'UTENTE
 const currentEmail = prompt("Qual è la tua mail?", "example.mail@gmail.com").trim("");
 console.log(currentEmail);
 
+//ACCOGLIENZA SE MAIL PRESENTE, NOTIFICA SE MAIL ASSENTE
 if (emails.includes(currentEmail)) {
     console.log("Bentornato!");
 } else {
@@ -26,16 +29,21 @@ if (emails.includes(currentEmail)) {
 
 //GIOCO DEI DADI
 
+//RANDOM NUMBER PER IL GIOCATORE
 let playerNumber = Math.floor(Math.random() * 6) +1;
 console.log(playerNumber);
 
+//RANDOM NUMBER PER IL PC 
 let computerNumber = Math.floor(Math.random() * 6) +1;
 console.log(computerNumber);
 
+//PLAYER VINCE 
 if (playerNumber > computerNumber){
     console.log(`Il Player ha vinto, con un punteggio di ${playerNumber}`);
+//COMPUTER VINCE
 } else if (computerNumber > playerNumber) {
     console.log(`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
+//PARITà
 } else if (computerNumber % playerNumber === 0) {
     console.log(`Nessuno dei due giocatori ha vinto, parità!`);
 }
