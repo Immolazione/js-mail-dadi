@@ -19,6 +19,7 @@ console.table(emails);
 //CHIEDERE MAIL ALL'UTENTE
 const currentEmail = prompt("Qual è la tua mail?", "example.mail@gmail.com").trim("");
 console.log(currentEmail);
+
 //ACCOGLIENZA SE MAIL PRESENTE, NOTIFICA SE MAIL ASSENTE
 for (let i = 0; i < emails.length; i++) {
     if (emails[i] == currentEmail) {
@@ -45,13 +46,12 @@ console.log(playerNumber);
 const computerNumber = Math.floor(Math.random() * 6) +1;
 console.log(computerNumber);
 
+//PARITà DI DEFAULT
+let restult = 'Nessuno dei due giocatori ha vinto, parità!';
 //PLAYER VINCE 
 if (playerNumber > computerNumber){
     console.log(`Il Player ha vinto, con un punteggio di ${playerNumber}`);
 //COMPUTER VINCE
 } else if (computerNumber > playerNumber) {
     console.log(`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
-//PARITà
-} else {
-    console.log(`Nessuno dei due giocatori ha vinto, parità!`);
 }
