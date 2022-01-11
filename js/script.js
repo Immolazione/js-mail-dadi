@@ -38,11 +38,11 @@ for (let i = 0; i < emails.length; i++) {
 //GIOCO DEI DADI
 
 //RANDOM NUMBER PER IL GIOCATORE
-let playerNumber = Math.floor(Math.random() * 6) +1;
+const playerNumber = Math.floor(Math.random() * 6) +1;
 console.log(playerNumber);
 
 //RANDOM NUMBER PER IL PC 
-let computerNumber = Math.floor(Math.random() * 6) +1;
+const computerNumber = Math.floor(Math.random() * 6) +1;
 console.log(computerNumber);
 
 //PLAYER VINCE 
@@ -52,6 +52,6 @@ if (playerNumber > computerNumber){
 } else if (computerNumber > playerNumber) {
     console.log(`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
 //PARITà
-} else if (computerNumber % playerNumber === 0) {
+} else {
     console.log(`Nessuno dei due giocatori ha vinto, parità!`);
 }
