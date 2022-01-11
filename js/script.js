@@ -13,7 +13,7 @@ console.log("JS OK");
 //MAIL 
 
 //ARRAY CON LE MAIL STORATE
-let emails = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com", "mail4@gmail.com"];
+const emails = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com", "mail4@gmail.com"];
 console.table(emails);
 
 //CHIEDERE MAIL ALL'UTENTE
@@ -22,8 +22,7 @@ console.log(currentEmail);
 
 //ACCOGLIENZA SE MAIL PRESENTE, NOTIFICA SE MAIL ASSENTE
 for (let i = 0; i < emails.length; i++) {
-    if (emails[i] == currentEmail) {
-        console.log(emails[i]);
+    if (emails[i] === currentEmail) {
         console.log("Bentornato!");
     } else {
         console.log("Email errata, se è la prima volta procedi con la registrazione, altrimenti ritenta");
@@ -50,8 +49,12 @@ console.log(computerNumber);
 let restult = 'Nessuno dei due giocatori ha vinto, parità!';
 //PLAYER VINCE 
 if (playerNumber > computerNumber){
-    console.log(`Il Player ha vinto, con un punteggio di ${playerNumber}`);
+    result = (`Il Player ha vinto, con un punteggio di ${playerNumber}`);
 //COMPUTER VINCE
 } else if (computerNumber > playerNumber) {
-    console.log(`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
+    result = (`Il Computer ha vinto, con un punteggio di ${computerNumber}`);
 }
+
+display.innerHTML = `<div>Numero Player: <strong>${playerNumber}</strong></div>
+<div>Numero Computer: <strong>${computerNumber}</strong></div>
+<div>${result}</div>`
