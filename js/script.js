@@ -46,7 +46,7 @@ const computerNumber = Math.floor(Math.random() * 6) +1;
 console.log(computerNumber);
 
 //PARITà DI DEFAULT
-let restult = 'Nessuno dei due giocatori ha vinto, parità!';
+let result = 'Nessuno dei due giocatori ha vinto, parità!';
 //PLAYER VINCE 
 if (playerNumber > computerNumber){
     result = (`Il Player ha vinto, con un punteggio di ${playerNumber}`);
